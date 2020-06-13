@@ -1,0 +1,42 @@
+body {
+	BACKGROUND-COLOR: #003366;
+	color: white;
+}
+.roundedImage {
+	flex: 1;
+	background-image: url('E4oGfFRF_400x400.jpg');
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	max-width: 200px;
+}
+.whiteLine {
+	width: 100%; 
+	padding-top: 0px;
+}
+.verseText {
+	align-self: flex-start;
+	padding-left: 20px;
+}
+.box {
+	flex: 1;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	min-width: 350px;
+	max-width: 475px;
+}
+.box div {
+	width: 100%;
+}
+.widget {
+	background-color: white;
+	border-radius: 5px;
+	padding: 10px;
+}
+ul
+{
+	padding-inline-start: 0px;
+	list-style: none;
+}
