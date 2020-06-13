@@ -9,26 +9,12 @@ body {
 	background-size: cover;
 	border-radius: 50%;
 	max-width: 200px;
-}
-.whiteLine {
-	width: 100%; 
-	padding-top: 0px;
+	height: 200px;
 }
 .verseText {
 	align-self: flex-start;
-	padding-left: 20px;
-}
-.box {
-	flex: 1;
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 10px;
-	min-width: 350px;
-	max-width: 475px;
-}
-.box div {
-	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 .widget {
 	background-color: white;
@@ -40,3 +26,4 @@ ul
 	padding-inline-start: 0px;
 	list-style: none;
 }
+.row { margin: 0; }
