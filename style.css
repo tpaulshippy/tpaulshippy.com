@@ -1,29 +1,118 @@
 body {
-	BACKGROUND-COLOR: #003366;
-	color: white;
+    background: linear-gradient(135deg, #1a2a6c, #003366);
+    color: #f8f9fa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 2rem 0;
 }
+
+.container-fluid {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .roundedImage {
-	flex: 1;
-	background-image: url('E4oGfFRF_400x400.jpg');
-	background-position: center;
-	background-size: cover;
-	border-radius: 50%;
-	max-width: 200px;
-	height: 200px;
+    background-image: url('IMG_0568.JPG');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+.roundedImage:hover {
+    transform: scale(1.05);
+}
+
 .verseText {
-	align-self: flex-start;
-	padding-left: 10px;
-	padding-right: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(5px);
 }
+
+.verseText .lead {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.verseText a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.verseText a:hover {
+    color: #e0e0e0;
+}
+
 .widget {
-	background-color: white;
-	border-radius: 5px;
-	padding: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: transform 0.3s ease;
 }
-ul
-{
-	padding-inline-start: 0px;
-	list-style: none;
+
+.widget:hover {
+    transform: translateY(-5px);
 }
-.row { margin: 0; }
+
+h2, h4 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+}
+
+ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+ul li a:hover {
+    color: #003366;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .verseText {
+        padding: 1.5rem;
+    }
+    
+    .widget {
+        padding: 1rem;
+    }
+}
+
+.row {
+    margin: 0 -15px;
+}
