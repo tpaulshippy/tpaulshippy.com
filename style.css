@@ -31,24 +31,48 @@ body {
 .verseText {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 1rem;
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 3rem;
+    margin: 2rem auto;
     backdrop-filter: blur(5px);
+    max-width: 1200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.verse-content {
+    flex: 1;
+    text-align: left;
 }
 
 .verseText .lead {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.verseText .verse-reference {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    opacity: 0.9;
+    text-align: right;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 1rem;
 }
 
 .verseText a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2px;
 }
 
 .verseText a:hover {
     color: #e0e0e0;
+    border-bottom-color: #e0e0e0;
 }
 
 .widget {
@@ -71,10 +95,14 @@ h2, h4 {
 }
 
 h4 {
-    color: #003366;
-    border-bottom: 2px solid #003366;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding-bottom: 0.5rem;
-    display: inline-block;
+    display: block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0;
 }
 
 ul {
@@ -115,4 +143,76 @@ ul li a:hover {
 
 .row {
     margin: 0 -15px;
+}
+
+/* GitHub Section Styles */
+.github-widget {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+.github-repo-card {
+    background: #f8f9fa;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e9ecef;
+}
+
+.github-repo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.github-repo-card h5 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+}
+
+.github-repo-card h5 a {
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.github-repo-card h5 a:hover {
+    color: #0056b3;
+}
+
+.repo-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.repo-language {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.repo-stars {
+    color: #f8b400;
+}
+
+.repo-updated {
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .github-repo-card {
+        margin-bottom: 0.75rem;
+    }
+    
+    .github-widget {
+        margin-bottom: 1.5rem;
+    }
 }
