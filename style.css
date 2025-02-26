@@ -199,6 +199,37 @@ ul li a:hover {
     color: #0056b3;
 }
 
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .social-links {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .social-links a {
+        font-size: 1.2rem;
+    }
+}
+
 .repo-stars {
     color: #f8b400;
 }
