@@ -26,6 +26,6 @@ ElseIf InStr( UCase(Request.ServerVariables("SERVER_NAME")), UCase("salonkchandl
         Response.RedirectPermanent("/skwp")
 		
 Else
-        Response.RedirectPermanent("/tpauls.htm") 
+        Response.RedirectPermanent("/index.html") 
 End If 
 %>
