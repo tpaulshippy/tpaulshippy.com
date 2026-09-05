@@ -247,9 +247,21 @@
         btn.setAttribute('aria-expanded', String(open));
       });
       nav.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', function () {
+        a.addEventListener('click', function (e) {
+          var hash = a.getAttribute('href');
           nav.classList.remove('open');
           btn.setAttribute('aria-expanded', 'false');
+          // Close the menu first so the header shrinks back to normal height,
+          // then scroll: otherwise the layout shift slides the target under
+          // the sticky header.
+          if (hash && hash.charAt(0) === '#' && hash.length > 1) {
+            e.preventDefault();
+            var target = document.querySelector(hash);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              history.replaceState(null, '', hash);
+            }
+          }
         });
       });
     })();

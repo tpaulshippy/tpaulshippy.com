@@ -186,7 +186,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: hsl(var(--background)); color: hsl(var(--foreground)); -webkit-font-smoothing: antialiased; }
 h1, h2, h3, p, ul, blockquote { margin: 0; }
 img { max-width: 100%; }
-section[id] { scroll-margin-top: 6rem; }
+#projects, #links, #writings, #verse { scroll-margin-top: 5rem; }
 
 /* ---------- icon sizing (icons are inline SVG, no icon CDN) ---------- */
 svg.lucide { height: 1rem; width: 1rem; flex-shrink: 0; }
