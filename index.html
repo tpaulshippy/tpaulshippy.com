@@ -203,6 +203,17 @@
     var STAR_SVG = '<svg class="lucide lucide-star" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" /></svg>';
     var ALERT_SVG = '<svg class="lucide lucide-triangle-alert" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg>';
 
+    // Jump so a card lands fully below the sticky header. Measures the
+    // live header height and jumps instantly: iOS shifts the viewport while
+    // its toolbar expands/collapses during animated scrolls, which eats the
+    // offset of smooth scrolling and scroll-margin.
+    function scrollToCard(target) {
+      var header = document.querySelector('.site-header');
+      var top = target.getBoundingClientRect().top + window.scrollY -
+        header.getBoundingClientRect().height - 16;
+      window.scrollTo(0, top < 0 ? 0 : top);
+    }
+
     async function fetchGitHubRepos() {
       var el = document.getElementById('github-activity');
       try {
@@ -234,13 +245,16 @@
       } catch (err) {
         el.innerHTML = '<div class="alert" role="alert">' + ALERT_SVG + '<p>' +
           escapeHtml((err && err.message) || 'Error loading GitHub repositories') + '</p></div>';
+      } finally {
+        // The Projects card changes height when repos render (or fail),
+        // which shifts every card below it. Re-assert a deep-link target.
+        if (window.__correctHashTarget) window.__correctHashTarget();
       }
     }
 
     (function initMenu() {
       var btn = document.getElementById('menu-toggle');
       var nav = document.getElementById('mobile-nav');
-      var header = document.querySelector('.site-header');
       function closeMenu() {
         nav.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
@@ -258,20 +272,46 @@
           e.preventDefault();
           var target = document.querySelector(hash);
           if (!target) return;
-          // Measure after the menu-close layout settles, then jump so the
-          // card lands fully below the sticky header. Instant (not smooth):
-          // iOS shifts the viewport while its toolbar expands/collapses
-          // during animated scrolls, which eats the offset.
+          // Measure after the menu-close layout settles, then jump.
           requestAnimationFrame(function () {
             requestAnimationFrame(function () {
-              var top = target.getBoundingClientRect().top + window.scrollY -
-                header.getBoundingClientRect().height - 16;
-              window.scrollTo(0, top < 0 ? 0 : top);
+              scrollToCard(target);
               history.replaceState(null, '', hash);
             });
           });
         });
       });
+    })();
+
+    // Deep links opened directly (e.g. /#links in a new tab): the browser
+    // jumps before async content (GitHub repos, fonts, images) finishes
+    // shifting the layout, stranding the viewport mid-card. Re-assert the
+    // offset at every layout milestone, unless the visitor has scrolled
+    // themselves (wheel / touch / keys only, so our own jumps and iOS
+    // toolbar shifts don't disarm it).
+    (function initDeepLinks() {
+      var userMoved = false;
+      ['wheel', 'touchmove', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, function () { userMoved = true; }, { passive: true });
+      });
+      function targetFromHash() {
+        var hash = window.location.hash;
+        if (!hash || hash.length < 2) return null;
+        try { return document.querySelector(hash); } catch (e) { return null; }
+      }
+      window.__correctHashTarget = function () {
+        if (userMoved) return;
+        var el = targetFromHash();
+        if (el) scrollToCard(el);
+      };
+      function onSettled(fn) {
+        requestAnimationFrame(function () { requestAnimationFrame(fn); });
+      }
+      onSettled(window.__correctHashTarget);
+      window.addEventListener('load', window.__correctHashTarget);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(window.__correctHashTarget);
+      }
     })();
 
     document.getElementById('year').textContent = new Date().getFullYear();
