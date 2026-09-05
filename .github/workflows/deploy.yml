@@ -1,0 +1,40 @@
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit
+        uses: actions/checkout@v4
+
+      - name: Deploy to server
+        env:
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          printf '%s\n' "$SSH_KEY" > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
+          ssh -o StrictHostKeyChecking=no -i /tmp/deploy_key root@$SERVER_HOST << 'EOF'
+            set -e
+            cd /home/tpaulshippy
+            git pull --ff-only
+            git rev-parse --short HEAD
+          EOF
+
+      - name: Smoke-check live site
+        run: |
+          for attempt in $(seq 1 15); do
+            if curl --fail --silent --max-time 10 https://tpaulshippy.com/ | grep -q "TPaulShippy.com"; then
+              echo "Live site OK"
+              exit 0
+            fi
+            echo "Attempt $attempt: marker not found yet, retrying..."
+            sleep 15
+          done
+          echo "Live site did not serve expected content"
+          exit 1
