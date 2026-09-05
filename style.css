@@ -26,7 +26,7 @@
 /* Dark theme follows the OS / browser system setting (no manual toggle). */
 @media (prefers-color-scheme: dark) {
 :root {
-  --background: 222.2 84% 4.9%;
+  --background: 0 0% 0%;
   --foreground: 210 40% 98%;
   --card: 222.2 84% 4.9%;
   --card-foreground: 210 40% 98%;
@@ -245,10 +245,8 @@ svg.lucide { height: 1rem; width: 1rem; flex-shrink: 0; }
 .hero-title { margin-top: 1rem; font-size: 1.875rem; font-weight: 600; letter-spacing: -0.025em; text-wrap: balance; }
 @media (min-width: 640px) { .hero-title { font-size: 2.25rem; } }
 .hero-sub { margin-top: 0.5rem; font-size: 1.125rem; color: hsl(var(--muted-foreground)); text-wrap: pretty; }
-.hero-desc { margin-top: 1rem; max-width: 42rem; font-size: 0.875rem; line-height: 1.5rem; color: hsl(var(--muted-foreground)); }
 .hero-cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .hero-social { margin-top: 1.25rem; display: flex; align-items: center; gap: 0.75rem; color: hsl(var(--muted-foreground)); }
-.hero-tagline { font-size: 0.75rem; }
 
 /* ---------- cards grid ---------- */
 .cards-grid { display: grid; gap: 1.5rem; padding-bottom: 1rem; }
