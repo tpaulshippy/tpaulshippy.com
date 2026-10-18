@@ -307,3 +307,4 @@ svg.lucide { height: 1rem; width: 1rem; flex-shrink: 0; }
 .app-domain { font-size: 0.75rem; color: hsl(var(--muted-foreground)); overflow-wrap: anywhere; }
 .app-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 0.25rem; }
 .app-actions .btn { white-space: normal; height: auto; min-height: 2rem; text-align: left; }
+.repo-head .badge { flex-shrink: 0; white-space: nowrap; margin-top: 0.25rem; }
