@@ -25,8 +25,8 @@
 
   function applyPost(title, url) {
     if (!url) return;
-    var fullTitle = title ? "Latest post: " + title : "Latest post";
-    var shortLabel = title ? "Latest: " + title : "Latest post";
+    var fullTitle = title || "Paul's Blog";
+    var shortLabel = title || "Paul's Blog";
 
     var link = document.getElementById("latest-post-link");
     var label = document.getElementById("latest-post-label");
