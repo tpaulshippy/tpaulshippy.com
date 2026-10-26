@@ -42,9 +42,13 @@ jobs:
           # Cache-bust: HTML edge-caches for 5 min, so a redeploy's smoke
           # check must not read the previous deployment's cached copy.
           Q="?smoke=$GITHUB_SHA"
-          curl --fail --silent --max-time 15 "$DEPLOY_URL/$Q" | grep -q "TPaulShippy.com"
+          # grep straight into a variable first: `curl | grep -q` trips
+          # pipefail (curl exits 23 on grep's early SIGPIPE close).
+          body=$(curl --fail --silent --max-time 15 "$DEPLOY_URL/$Q")
+          grep -q "TPaulShippy.com" <<<"$body"
           echo "Home page OK"
-          curl --fail --silent --max-time 15 "$DEPLOY_URL/McCain.html$Q" | grep -q "McCain"
+          body=$(curl --fail --silent --max-time 15 "$DEPLOY_URL/McCain.html$Q")
+          grep -q "McCain" <<<"$body"
           echo "Legacy essay OK"
           code=$(curl --silent --output /dev/null --write-out '%{http_code}' --max-time 15 "$DEPLOY_URL/this-page-does-not-exist-12345$Q")
           if [ "$code" != "404" ]; then
