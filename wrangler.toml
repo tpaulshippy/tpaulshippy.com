@@ -2,6 +2,15 @@ name = "tpaulshippy-com"
 compatibility_date = "2026-10-26"
 main = "src/index.js"
 
+# Custom domains (apex + www) attach on every deploy; www redirects to apex.
+[[routes]]
+pattern = "tpaulshippy.com"
+custom_domain = true
+
+[[routes]]
+pattern = "www.tpaulshippy.com"
+custom_domain = true
+
 [assets]
 directory = "./"
 binding = "ASSETS"
