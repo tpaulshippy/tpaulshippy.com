@@ -168,7 +168,7 @@ function head(title, description, canonical) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://tpaulshippy.com/style.css?v=4" type="text/css" rel="stylesheet" />
+  <link href="https://tpaulshippy.com/style.css?v=7" type="text/css" rel="stylesheet" />
   <style>
     /* Article typography: the site reset zeroes all margins, so prose
        needs its own vertical rhythm. */
