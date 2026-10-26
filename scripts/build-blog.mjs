@@ -300,7 +300,7 @@ function indexPage(posts) {
       <div class="card">
         <div class="card-content">
           <p class="eyebrow">Paul's Blog</p>
-          <h1 class="hero-title">Notes &amp; Essays</h1>
+          <h1 class="hero-title">Googling with Bing on Brave</h1>
           <p class="hero-sub">Short posts on software, learning, and life. Newest first.</p>
         </div>
       </div>
@@ -376,7 +376,7 @@ function main() {
     .join("\n");
   writeFileSync(
     join(OUT, "feed.xml"),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n  <channel>\n    <title>Paul's Blog</title>\n    <link>${BLOG_HOME}/</link>\n    <description>Notes on software, homesteading, and learning by Paul Shippy.</description>\n    <language>en-us</language>\n${rssItems}\n  </channel>\n</rss>\n`
+    `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n  <channel>\n    <title>Googling with Bing on Brave</title>\n    <link>${BLOG_HOME}/</link>\n    <description>Notes on software, homesteading, and learning by Paul Shippy.</description>\n    <language>en-us</language>\n${rssItems}\n  </channel>\n</rss>\n`
   );
 
   // latest.json for the homepage widget
