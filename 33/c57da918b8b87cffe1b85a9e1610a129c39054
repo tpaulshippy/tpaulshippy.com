@@ -1,0 +1,14 @@
+.github/workflows/deploy.yml
+  h_6bbd00fe0a456a 30,32-34
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "33c57da918b8b87cffe1b85a9e1610a129c39054",
+  "prompts": {},
+  "humans": {
+    "h_6bbd00fe0a456a": {
+      "author": "Paul Shippy <pshippy@gmail.com>"
+    }
+  }
+}
