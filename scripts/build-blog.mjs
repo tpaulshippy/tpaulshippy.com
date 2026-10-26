@@ -205,8 +205,8 @@ function head(title, description, canonical) {
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a href="https://tpaulshippy.com/" class="brand">
-        <span class="avatar avatar-sm"><span class="avatar-fallback">PS</span></span>
+      <a href="/" class="brand">
+        <span class="avatar avatar-sm"><img src="https://tpaulshippy.com/IMG_0568.JPG" alt="Photo of Paul Shippy" onerror="this.style.display='none'" /><span class="avatar-fallback">PS</span></span>
         <span class="brand-text">
           <span class="brand-name">Paul's Blog</span>
           <span class="brand-sub">TPaulShippy.com</span>
