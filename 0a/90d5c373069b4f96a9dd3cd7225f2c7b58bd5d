@@ -1,0 +1,14 @@
+scripts/build-blog.mjs
+  h_6bbd00fe0a456a 198-201,287-295,308
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0a90d5c373069b4f96a9dd3cd7225f2c7b58bd5d",
+  "prompts": {},
+  "humans": {
+    "h_6bbd00fe0a456a": {
+      "author": "Paul Shippy <pshippy@gmail.com>"
+    }
+  }
+}
