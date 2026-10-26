@@ -20,7 +20,7 @@ const LEGACY_ALIASES = new Map([
 // NOTE: /wp-content/uploads/* is deliberately NOT listed — post images
 // live there and must keep serving.
 const BLOG_HOME_REDIRECTS = [
-  /^\/wp-(admin|login|cron|json|includes)(?:\/|$)/,
+  /^\/wp-(admin|login|cron|json|includes)/,
   /^\/xmlrpc\.php$/,
   /^\/comments(?:\/|$)/,
   /^\/author(?:\/|$)/,
