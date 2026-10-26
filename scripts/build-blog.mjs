@@ -170,10 +170,30 @@ function head(title, description, canonical) {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://tpaulshippy.com/style.css?v=4" type="text/css" rel="stylesheet" />
   <style>
+    /* Article typography: the site reset zeroes all margins, so prose
+       needs its own vertical rhythm. */
+    .post-content { line-height: 1.75; overflow-wrap: break-word; }
+    .post-content > *:first-child { margin-top: 0; }
+    .post-content > *:last-child { margin-bottom: 0; }
+    .post-content p { margin: 1.15em 0; }
+    .post-content h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.02em; margin: 2em 0 0.6em; line-height: 1.3; }
+    .post-content h3 { font-size: 1.25rem; font-weight: 600; margin: 1.8em 0 0.5em; line-height: 1.35; }
+    .post-content h4 { font-size: 1.05rem; font-weight: 600; margin: 1.6em 0 0.5em; line-height: 1.4; }
+    .post-content ul, .post-content ol { margin: 1.15em 0; padding-left: 1.6rem; }
+    .post-content li { margin: 0.4em 0; }
+    .post-content li > ul, .post-content li > ol { margin: 0.4em 0; }
+    .post-content a { color: hsl(var(--foreground)); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: hsl(var(--border)); overflow-wrap: anywhere; }
+    .post-content a:hover { text-decoration-color: hsl(var(--foreground)); }
+    .post-content blockquote { margin: 1.5em 0; padding: 0.25em 0 0.25em 1rem; border-left: 3px solid hsl(var(--border)); color: hsl(var(--muted-foreground)); }
+    .post-content blockquote p { margin: 0.6em 0; }
     .post-content img { max-width: 100%; height: auto; border-radius: 8px; }
-    .post-content figure { margin: 1.5em 0; }
-    .post-content figcaption { font-size: 0.85em; opacity: 0.75; margin-top: 0.4em; }
-    .post-content pre { overflow-x: auto; padding: 1em; border-radius: 8px; }
+    .post-content figure { margin: 1.75em 0; }
+    .post-content figcaption { font-size: 0.85em; opacity: 0.75; margin-top: 0.5em; }
+    .post-content pre { overflow-x: auto; margin: 1.5em 0; padding: 1em 1.15em; border-radius: 8px; border: 1px solid hsl(var(--border)); background: hsl(var(--muted)); font-size: 0.85em; line-height: 1.6; }
+    .post-content code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85em; }
+    .post-content p code, .post-content li code { background: hsl(var(--muted)); border: 1px solid hsl(var(--border)); border-radius: 6px; padding: 0.1em 0.35em; overflow-wrap: anywhere; }
+    .post-content pre code { background: none; border: 0; padding: 0; font-size: 1em; }
+    .post-content hr { margin: 2.25em 0; border: 0; border-top: 1px solid hsl(var(--border)); }
     .post-meta { opacity: 0.75; font-size: 0.9em; margin-bottom: 1.5em; }
   </style>
 </head>
@@ -193,7 +213,17 @@ function head(title, description, canonical) {
         <a class="btn btn-ghost btn-sm" href="/">Blog</a>
         <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
       </nav>
+      <div class="header-actions">
+        <button id="menu-toggle" class="btn btn-ghost btn-icon menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
+        </button>
+      </div>
     </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/">Home</a>
+      <a class="btn btn-ghost btn-sm" href="/">Blog</a>
+      <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
+    </nav>
   </header>
   <main id="main" class="container">`;
 }
@@ -203,6 +233,23 @@ const FOOT = `  </main>
     <p>&copy; <span id="year"></span> Paul Shippy &middot; <a class="link" href="https://tpaulshippy.com/">TPaulShippy.com</a></p>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function () {
+      var btn = document.getElementById('menu-toggle');
+      var nav = document.getElementById('mobile-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
 `;
