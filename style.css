@@ -231,7 +231,7 @@ svg.lucide { height: 1rem; width: 1rem; flex-shrink: 0; }
 .header-actions .btn-icon { border: 0; }
 .mobile-nav { display: none; border-top: 1px solid hsl(var(--border)); padding: 0.5rem 1rem; flex-direction: column; }
 .mobile-nav.open { display: flex; }
-@media (min-width: 768px) { .mobile-nav, .mobile-nav.open { display: none; } .menu-toggle { display: none; } }
+@media (min-width: 768px) { .mobile-nav, .mobile-nav.open { display: none; } .menu-toggle { display: none; } .hide-on-desktop { display: none; } }
 
 /* ---------- hero ---------- */
 .hero-section { padding-top: 2.5rem; padding-bottom: 2.5rem; }
