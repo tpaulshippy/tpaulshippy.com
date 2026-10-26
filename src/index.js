@@ -5,6 +5,7 @@
 // and security/caching headers on every response.
 
 const CANONICAL_HOST = "tpaulshippy.com";
+const BLOG_HOST = "blog.tpaulshippy.com";
 
 // Legacy URLs that must keep working after leaving case-insensitive IIS.
 // Keys are matched against the request pathname verbatim.
@@ -15,8 +16,26 @@ const LEGACY_ALIASES = new Map([
   ["/IsJohnPiperALibertarian.htm", "/IsJohnPiperaLibertarian.htm"],
 ]);
 
+// Blog: retired WordPress routes that collapse to the blog home.
+// NOTE: /wp-content/uploads/* is deliberately NOT listed — post images
+// live there and must keep serving.
+const BLOG_HOME_REDIRECTS = [
+  /^\/wp-(admin|login|cron|json|includes)(?:\/|$)/,
+  /^\/xmlrpc\.php$/,
+  /^\/comments(?:\/|$)/,
+  /^\/author(?:\/|$)/,
+  /^\/tag(?:\/|$)/,
+  /^\/category(?:\/|$)/,
+  /^\/page\/\d+\/?$/,
+  // Date archives without a post slug (/YYYY/, /YYYY/MM/, /YYYY/MM/DD/).
+  /^\/\d{4}\/?$/,
+  /^\/\d{4}\/\d{2}\/?$/,
+  /^\/\d{4}\/\d{2}\/\d{2}\/?$/,
+];
+
 // Fetch an asset with the site-wide security/caching headers applied.
-async function serveAsset(request, env) {
+// Extra headers (e.g. CORS) can be passed per response.
+async function serveAsset(request, env, extraHeaders) {
   const res = await env.ASSETS.fetch(request);
   const headers = new Headers(res.headers);
   headers.set("X-Content-Type-Options", "nosniff");
@@ -26,6 +45,9 @@ async function serveAsset(request, env) {
     "Permissions-Policy",
     "camera=(), microphone=(), geolocation=()",
   );
+  if (extraHeaders) {
+    for (const [k, v] of Object.entries(extraHeaders)) headers.set(k, v);
+  }
   const contentType = res.headers.get("content-type") || "";
   if (contentType.includes("text/html")) {
     headers.set("Cache-Control", "public, max-age=300");
@@ -47,6 +69,38 @@ export default {
     if (url.hostname === `www.${CANONICAL_HOST}`) {
       url.hostname = CANONICAL_HOST;
       return Response.redirect(url.toString(), 301);
+    }
+
+    // --- Blog host: serve the generated blog/ asset subtree. ---
+    if (url.hostname === BLOG_HOST) {
+      // Retired WordPress routes collapse to the blog home.
+      if (BLOG_HOME_REDIRECTS.some((re) => re.test(url.pathname))) {
+        return Response.redirect(`${url.origin}/`, 301);
+      }
+
+      // /index.html -> / (canonical home).
+      if (url.pathname === "/index.html" || url.pathname === "/index.htm") {
+        return Response.redirect(`${url.origin}/`, 301);
+      }
+
+      // Map blog URLs into the blog/ asset prefix. /feed/ serves the RSS
+      // feed in place so feed readers and the homepage widget keep working.
+      let assetPath = `/blog${url.pathname}`;
+      if (url.pathname === "/feed" || url.pathname === "/feed/") {
+        assetPath = "/blog/feed.xml";
+      }
+      const allowCors =
+        assetPath === "/blog/feed.xml" || assetPath === "/blog/latest.json";
+
+      // Trailing-slash paths resolve to their index.html (permalinks end
+      // in / and are stored as .../slug/index.html).
+      if (assetPath.endsWith("/")) {
+        assetPath += "index.html";
+      }
+      const assetUrl = new URL(url.origin + assetPath);
+      return serveAsset(new Request(assetUrl, request), env, {
+        ...(allowCors ? { "Access-Control-Allow-Origin": "*" } : {}),
+      });
     }
 
     // /index.html -> / (canonical home, preserves query).

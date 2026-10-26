@@ -8,3 +8,5 @@ FormProcessor/
 .wrangler/
 .dev.vars
 node_modules/
+# Generated static blog (built by scripts/build-blog.mjs in CI / locally)
+blog/

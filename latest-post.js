@@ -1,12 +1,11 @@
 // Points the homepage "blog" buttons at the most recent blog post.
 //
-// Tries the WordPress REST API first (usually CORS-enabled), then falls back
-// to the RSS feed. If both fail (offline, blocked), the fallback hrefs to
-// the blog home already in the HTML stay in place.
+// Tries the static latest.json first (same content, no backend), then falls
+// back to the RSS feed. If both fail (offline, blocked), the fallback hrefs
+// to the blog home already in the HTML stay in place.
 (function () {
   var BLOG_HOME = "https://blog.tpaulshippy.com/";
-  var API_URL =
-    "https://blog.tpaulshippy.com/wp-json/wp/v2/posts?per_page=1&_fields=link,title,date";
+  var LATEST_URL = "https://blog.tpaulshippy.com/latest.json";
   var RSS_URL = "https://blog.tpaulshippy.com/feed/";
 
   function decodeEntities(s) {
@@ -45,17 +44,15 @@
     if (heroLabel) heroLabel.textContent = shortLabel;
   }
 
-  function fromRestApi() {
-    return fetch(API_URL, { headers: { Accept: "application/json" } }).then(
+  function fromLatestJson() {
+    return fetch(LATEST_URL, { headers: { Accept: "application/json" } }).then(
       function (res) {
-        if (!res.ok) throw new Error("posts API " + res.status);
+        if (!res.ok) throw new Error("latest.json " + res.status);
         return res.json();
       }
-    ).then(function (posts) {
-      if (!posts || !posts.length) throw new Error("no posts");
-      var post = posts[0];
-      var title = cleanTitle(post.title && post.title.rendered);
-      return { title: title, url: post.link };
+    ).then(function (latest) {
+      if (!latest || !latest.url) throw new Error("no posts");
+      return { title: cleanTitle(latest.title || ""), url: latest.url };
     });
   }
 
@@ -80,7 +77,7 @@
   }
 
   function fetchLatestPost() {
-    fromRestApi().then(
+    fromLatestJson().then(
       function (viaApi) {
         if (viaApi.url) applyPost(viaApi.title, viaApi.url);
       },

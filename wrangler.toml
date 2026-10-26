@@ -11,6 +11,10 @@ custom_domain = true
 pattern = "www.tpaulshippy.com"
 custom_domain = true
 
+[[routes]]
+pattern = "blog.tpaulshippy.com"
+custom_domain = true
+
 [assets]
 directory = "./"
 binding = "ASSETS"

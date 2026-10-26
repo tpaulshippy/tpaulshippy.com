@@ -11,6 +11,8 @@ node_modules/
 # Repo / toolchain meta, not site content
 wrangler.toml
 src/
+scripts/
+blog-src/
 README.md
 .gitignore
 .assetsignore

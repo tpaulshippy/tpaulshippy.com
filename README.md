@@ -24,6 +24,30 @@ This repo holds the static single-page homepage for tpaulshippy.com, the persona
 npx wrangler@4.153.0 dev   # serves the worker + assets locally
 ```
 
+## Blog (static, same worker)
+
+Posts live as Markdown in `blog-src/posts/` (frontmatter: `title`, `date`,
+`slug`, `tags`). Images go in `blog-src/uploads/` under the same
+`wp-content/uploads/...` paths WordPress used, so old image URLs keep working.
+
+```sh
+node scripts/build-blog.mjs   # generates blog/ (git-ignored): post pages,
+                              # index, feed.xml, latest.json, sitemap.xml
+python3 -m http.server         # preview at http://localhost:8000/blog/...
+```
+
+Pushes to `master` rebuild and deploy automatically. The worker serves the
+blog on the `blog.tpaulshippy.com` hostname from the `blog/` asset prefix,
+preserving the exact WordPress permalinks (`/YYYY/MM/DD/slug/`), so no
+redirects were needed. Retired WP routes (`/wp-admin`, `/category/*`,
+`/page/*`, date archives, …) 301 to the blog home. `blog/latest.json`
+powers the homepage "latest post" buttons (`latest-post.js`, with the RSS
+feed as fallback).
+
+To publish a post: add `blog-src/posts/<slug>.md` (date = publish date,
+determines the URL), add any images under `blog-src/uploads/wp-content/`,
+run the build once locally to preview, then push.
+
 ## One-time Cloudflare setup
 
 1. Add `tpaulshippy.com` to Cloudflare and change the domain's nameservers

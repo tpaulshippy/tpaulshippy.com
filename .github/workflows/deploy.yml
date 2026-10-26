@@ -20,6 +20,15 @@ jobs:
         with:
           node-version: 22
 
+      - name: Build static blog
+        run: |
+          set -euo pipefail
+          node scripts/build-blog.mjs
+          test -f blog/index.html
+          test -f blog/feed.xml
+          test -f blog/latest.json
+          echo "blog pages: $(find blog -name index.html | wc -l)"
+
       - name: Deploy to Cloudflare Workers
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -67,3 +76,27 @@ jobs:
             */McCain.html*) echo "Legacy alias redirect OK ($loc)" ;;
             *) echo "Legacy alias redirect failed: $loc"; exit 1 ;;
           esac
+
+      - name: Smoke-check blog
+        run: |
+          set -euo pipefail
+          BLOG_URL="https://blog.tpaulshippy.com"
+          Q="?smoke=$GITHUB_SHA"
+          body=$(curl --fail --silent --max-time 15 "$BLOG_URL/$Q")
+          grep -q "Paul's Blog" <<<"$body"
+          echo "Blog home OK"
+          body=$(curl --fail --silent --max-time 15 "$BLOG_URL/2020/06/15/introduction/$Q")
+          grep -q "Introduction" <<<"$body"
+          echo "Blog post OK"
+          body=$(curl --fail --silent --max-time 15 "$BLOG_URL/latest.json$Q")
+          grep -q "building-a-native-ios-app-in-a-day" <<<"$body"
+          echo "latest.json OK"
+          body=$(curl --fail --silent --max-time 15 "$BLOG_URL/feed/$Q")
+          grep -q "<rss" <<<"$body"
+          echo "RSS feed OK"
+          code=$(curl --silent --output /dev/null --write-out '%{http_code}' --max-time 15 "$BLOG_URL/wp-login.php$Q")
+          if [ "$code" != "301" ]; then
+            echo "Expected 301 for retired WP route, got $code"
+            exit 1
+          fi
+          echo "Retired WP routes OK"
