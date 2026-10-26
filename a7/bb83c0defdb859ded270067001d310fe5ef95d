@@ -1,0 +1,56 @@
+.assetsignore
+  h_6bbd00fe0a456a 14-15
+.github/workflows/deploy.yml
+  h_6bbd00fe0a456a 23-31,79-102
+.gitignore
+  h_6bbd00fe0a456a 10-12
+README.md
+  h_6bbd00fe0a456a 27-50
+blog-src/posts/async-python-handlers-in-aws-lambda.md
+  h_6bbd00fe0a456a 1-33
+blog-src/posts/bitwarden-subdomains.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/building-a-native-ios-app-in-a-day.md
+  h_6bbd00fe0a456a 1-107
+blog-src/posts/cholesterol-blood-testing.md
+  h_6bbd00fe0a456a 1-29
+blog-src/posts/constructing-javascript-objects.md
+  h_6bbd00fe0a456a 1-42
+blog-src/posts/creating-subfolders.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/google-calendar-drag-and-drop.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/introduction.md
+  h_6bbd00fe0a456a 1-25
+blog-src/posts/multidomain-ssl-certificates.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/react-native-with-rails-turbo-streams.md
+  h_6bbd00fe0a456a 1-252
+blog-src/posts/setting-up-a-bluesky-pds-with-aws-free-tier.md
+  h_6bbd00fe0a456a 1-85
+blog-src/posts/table-metadata-in-oracle.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/wordpress-email-server.md
+  h_6bbd00fe0a456a 1-21
+blog-src/posts/working-folder-for-npm-scripts.md
+  h_6bbd00fe0a456a 1-39
+latest-post.js
+  h_6bbd00fe0a456a 3-5,8,47-48,50,53-55,80
+scripts/build-blog.mjs
+  h_6bbd00fe0a456a 1-359
+src/index.js
+  h_6bbd00fe0a456a 8,19-35,37-38,48-50,74-105
+wrangler.toml
+  h_6bbd00fe0a456a 14-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a7bb83c0defdb859ded270067001d310fe5ef95d",
+  "prompts": {},
+  "humans": {
+    "h_6bbd00fe0a456a": {
+      "author": "Paul Shippy <pshippy@gmail.com>"
+    }
+  }
+}
