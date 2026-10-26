@@ -1,7 +1,9 @@
 # tpaulshippy.com
 
-Paul Shippy's personal website, hosted as a **Cloudflare Worker with static
+Paul Shippy's Personal Website, hosted as a **Cloudflare Worker with static
 assets** at <https://tpaulshippy.com>.
+
+This repo holds the static single-page homepage for tpaulshippy.com, the personal site of Paul Shippy — a Christian software developer and homeschooling dad. It features his projects, favorite links, and writings alongside links to his blog and GitHub, built as a self-contained, mobile-friendly page with system-aware dark mode and no runtime dependencies.
 
 ## How it works
 
