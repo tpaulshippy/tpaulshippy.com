@@ -7,3 +7,6 @@ directory = "./"
 binding = "ASSETS"
 run_worker_first = true
 not_found_handling = "404-page"
+# Serve legacy .html URLs directly (200) instead of redirecting to
+# extensionless clean URLs — preserves 25 years of indexed/bookmarked URLs.
+html_handling = "none"
