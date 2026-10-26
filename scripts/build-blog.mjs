@@ -163,12 +163,12 @@ function head(title, description, canonical) {
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeAttr(description)}" />
   <link rel="canonical" href="${canonical}" />
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://tpaulshippy.com/favicon.ico" />
   <link rel="alternate" type="application/rss+xml" title="Paul's Blog" href="/feed.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="/style.css?v=4" type="text/css" rel="stylesheet" />
+  <link href="https://tpaulshippy.com/style.css?v=4" type="text/css" rel="stylesheet" />
   <style>
     .post-content img { max-width: 100%; height: auto; border-radius: 8px; }
     .post-content figure { margin: 1.5em 0; }
