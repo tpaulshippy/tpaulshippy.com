@@ -195,6 +195,10 @@ function head(title, description, canonical) {
     .post-content pre code { background: none; border: 0; padding: 0; font-size: 1em; }
     .post-content hr { margin: 2.25em 0; border: 0; border-top: 1px solid hsl(var(--border)); }
     .post-meta { opacity: 0.75; font-size: 0.9em; margin-bottom: 1.5em; }
+    /* Blog index: one column on phones, spreading across desktop. */
+    .blog-index { grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .blog-index { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (min-width: 1100px) { .blog-index { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   </style>
 </head>
 <body>
@@ -280,13 +284,15 @@ ${FOOT}`;
 function indexPage(posts) {
   const items = posts
     .map(
-      (p) => `            <article class="repo-card">
-              <div class="repo-head">
-                <a class="repo-name" href="${p.path}">${escapeHtml(p.title)}</a>
-              </div>
-              <p class="repo-desc">${escapeHtml(p.excerpt)}</p>
-              <div class="repo-meta"><span><time datetime="${p.date}">${p.displayDate}</time></span></div>
-            </article>`
+      (p) => `      <article class="card">
+        <div class="card-content">
+          <div class="repo-head">
+            <a class="repo-name" href="${p.path}">${escapeHtml(p.title)}</a>
+          </div>
+          <p class="repo-desc">${escapeHtml(p.excerpt)}</p>
+          <div class="repo-meta"><span><time datetime="${p.date}">${p.displayDate}</time></span></div>
+        </div>
+      </article>`
     )
     .join("\n");
   return `${head("Paul's Blog — Christian software developer notes", "Notes on software, homesteading, and learning by Paul Shippy.", `${BLOG_HOME}/`)}
@@ -299,14 +305,8 @@ function indexPage(posts) {
         </div>
       </div>
     </section>
-    <section class="cards-grid">
-      <div class="card">
-        <div class="card-content">
-          <div class="stack">
+    <section class="cards-grid blog-index">
 ${items}
-          </div>
-        </div>
-      </div>
     </section>
 ${FOOT}`;
 }
