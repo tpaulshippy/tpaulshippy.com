@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tpaulshippy.com
+Token: 7083836c939649c6d36fb437a8df9addf4976544b811149935e0060cc8c505ee

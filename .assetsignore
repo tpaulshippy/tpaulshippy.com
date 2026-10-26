@@ -1,0 +1,43 @@
+# Files in the repo root that must NOT be uploaded as public site assets.
+# Same format as .gitignore. The legacy app directories below (classic
+# ASP.NET/PHP sites, ~2.8 GB) cannot run on Workers and are excluded;
+# only the homepage, writings, and their small static assets deploy.
+
+.git/
+.github/
+.wrangler/
+node_modules/
+
+# Repo / toolchain meta, not site content
+wrangler.toml
+src/
+README.md
+.gitignore
+.assetsignore
+.DS_Store
+preview/
+
+# Legacy server-side apps (ASP.NET, PHP, FrontPage) - cannot run on Workers
+App_Data/
+aspnet_client/
+azr/
+chalet/
+chateau/
+dcc/
+FormProcessor/
+hitman/
+Judah/
+marlattwater/
+RedeemTalk/
+sc/
+skwp/
+ssc/
+StressMeter/
+tw/
+wp/
+
+# Server-side / IIS-only files with no static equivalent
+*.aspx
+web.config
+winhostdefault.htm
+testemail.aspx

@@ -1,0 +1,28 @@
+body {
+BACKGROUND-COLOR: #003366;
+font-family: Arial;
+color: white;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+a {
+text-decoration:none;
+color: #0070A0;
+}
+a:hover {
+text-decoration: underline;
+color: #FFFFFF;
+}
+.Box {
+	background-color: #052648;
+	padding: 4px;
+
+}
+.C
+{
+	padding-top: 4px;
+	BORDER-TOP: #808090 1px solid;
+	font-size: 10pt;
+}

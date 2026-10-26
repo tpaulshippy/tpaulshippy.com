@@ -1,2 +1,10 @@
 FormProcessor/
-.well-known
+.well-known/*
+!.well-known/brave-rewards-verification.txt
+!.well-known/pki-validation/
+.DS_Store
+
+# Cloudflare / wrangler local state
+.wrangler/
+.dev.vars
+node_modules/
