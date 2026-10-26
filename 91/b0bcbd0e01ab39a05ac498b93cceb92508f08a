@@ -1,0 +1,20 @@
+README.md
+  h_6bbd00fe0a456a 3,6-7
+index.html
+  h_6bbd00fe0a456a 7,12,28,43,67,83-140,166,380
+latest-post.js
+  h_6bbd00fe0a456a 1-106
+style.css
+  h_6bbd00fe0a456a 275-310
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "91b0bcbd0e01ab39a05ac498b93cceb92508f08a",
+  "prompts": {},
+  "humans": {
+    "h_6bbd00fe0a456a": {
+      "author": "Paul Shippy <pshippy@gmail.com>"
+    }
+  }
+}
