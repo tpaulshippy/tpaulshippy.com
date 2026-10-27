@@ -10,3 +10,12 @@ FormProcessor/
 node_modules/
 # Generated static blog (built by scripts/build-blog.mjs in CI / locally)
 blog/
+
+# Generated writings (built by scripts/build-blog.mjs in CI / locally)
+McCain.html
+Adenauer.htm
+Federalism&Education.htm
+Nonviolence.htm
+Judicial Review.htm
+Mind Wars.htm
+Testimony.htm

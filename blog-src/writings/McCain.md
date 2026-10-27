@@ -1,114 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-	<TITLE>John McCain: The Leadership of a Moderate Republican in the Senate</TITLE>
-	<META NAME="GENERATOR" CONTENT="NeoOffice 2.2  (Unix)">
-	<META NAME="AUTHOR" CONTENT="T. Paul Shippy">
-	<META NAME="CREATED" CONTENT="20051123;12040000">
-	<META NAME="CHANGEDBY" CONTENT="T. Paul Shippy">
-	<META NAME="CHANGED" CONTENT="20051129;13550000">
-	<STYLE TYPE="text/css">
-	<!--
-		@page { size: 8.5in 11in; margin: 1in }
-		P { margin-bottom: 0.08in; direction: ltr; color: #000000; widows: 2; orphans: 2 }
-		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: en-US }
-		P.cjk { font-family: "Times New Roman", serif; font-size: 12pt }
-		P.ctl { font-family: "Times New Roman", serif; font-size: 12pt; so-language: ar-SA }
-	-->
-	</STYLE>
-</HEAD>
-<BODY LANG="en-US" TEXT="#000000" DIR="LTR">
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><B>John
-McCain:</B></P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><B>The
-Leadership of a Moderate Republican in the Senate </B>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in">Paul
-Shippy</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=CENTER STYLE="margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in; line-height: 200%">
-Dr. Carroll</P>
-<P CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in; line-height: 200%">
-GOV 230: The Congress</P>
-<P CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0in; line-height: 200%">
-November 30, 2005</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+---
+title: "John McCain: The Leadership of a Moderate Republican in the Senate"
+out: McCain.html
+---
+
 John McCain is a Republican Senator from Arizona with a lengthy and
 multifaceted legislative career. He is also a Vietnam War veteran who
 suffered for five and a half years as a prisoner of war, so his
@@ -130,21 +24,21 @@ finance reform, which was signed in 2002. After being reelected in
 moderate negotiator. It seems that McCain has built a successful
 legislative career on his personal background, media popularity, and
 political skill, while he has suffered somewhat from his infrequent
-opposition to the Republican agenda.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+opposition to the Republican agenda.
+
 The life of John McCain must be understood in light of the
 accomplishments of his father and grandfather. McCain was born John
-Sidney McCain III in 1935 to John McCain Jr., known as &quot;Jack&quot;
-(Alexander 2003, 12). Both Jack and his father, &quot;Slew,&quot;
+Sidney McCain III in 1935 to John McCain Jr., known as "Jack"
+(Alexander 2003, 12). Both Jack and his father, "Slew,"
 attended the Naval Academy, became Commanders in the Navy, and fought
 for the United States in World War II (McCain and Salter 1999). Jack
 also served in the Vietnam War as the Commander in Chief of the
 Pacific forces. Senator McCain now calls his father and grandfather
-&quot;my first heroes,&quot; and he says that &quot;earning their
-respect has been the most lasting ambition of my life&quot; (McCain
+"my first heroes," and he says that "earning their
+respect has been the most lasting ambition of my life" (McCain
 and Salter 1999). It is clear that the McCain family legacy had a
-huge impact on McCain both personally and politically.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+huge impact on McCain both personally and politically.
+
 As might be expected, John McCain III was expected to carry on the
 family tradition (Dorland 2001, 165) and it never even occurred to
 him that he might not enter the navy (Alexander 2003, 18). Military
@@ -162,9 +56,9 @@ offer to be released and sent home because he knew that the
 Vietnamese intended to use his release as propaganda for their side;
 this decision resulted in the worst year and a half of his time there
 (Alexander 2003, 58). McCain said later of his experiences:
-&quot;Surviving my imprisonment strengthened my self-confidence, and
-my refusal of early release taught me to trust my own judgment.&quot;</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+"Surviving my imprisonment strengthened my self-confidence, and
+my refusal of early release taught me to trust my own judgment."
+
 The 1970's were difficult for John McCain. After receiving the honors
 due to his heroism, he spent the next few years writing, studying at
 the National War College, undergoing multiple operations and physical
@@ -179,8 +73,8 @@ States Senate, and he was led to Arizona by his ambition (McCain and
 Salter 2002). Elected to the House in 1982, and reelected in 1984,
 McCain was introduced to political life, and he found it
 satisfactory. When Barry Goldwater retired from the Senate in 1986,
-he won the vacated seat and has held it ever since.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+he won the vacated seat and has held it ever since.
+
 John McCain's personal history forms a necessary background to his
 political success primarily because his life before politics has in
 many ways defined his home style (Fenno 1977). Unlike some
@@ -191,9 +85,8 @@ could easily present himself as a fellow American. In fact, it was
 his devotion to his country that he relied upon most of all to endear
 himself to the people of Arizona. Military heroism was a family
 tradition and he capitalized on the wonder and respect engendered by
-his sacrifices for the United States abroad. 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+his sacrifices for the United States abroad.
+
 In analyzing his home style, it is important to recognize who his
 constituents actually were. As a state, Arizona has a long history of
 attracting people from all over America to start a new life. It also
@@ -210,8 +103,8 @@ it was populated by a large number of Mormons, and the state party
 held Barry Goldwater as their flag bearer. Furthermore, the entire
 nation was solidly behind the conservative Republican president,
 Ronald Reagan, as he had taken office just two years before McCain
-entered Congress.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+entered Congress.
+
 It is no surprise, then, that John McCain ran as a Republican. His
 personal experience matched very closely with people like my father
 and a certain bond of trust was formed as McCain campaigned. As he
@@ -222,8 +115,8 @@ well with the Republicans. He was pro-life, anti-gun control, and of
 course, pro-military. But his policy views were not as important as
 the fact that he was a Republican and a war hero. After barely
 winning the primary as the underdog candidate (Alexander 2003, 96),
-McCain coasted into office in the heavily Republican district.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+McCain coasted into office in the heavily Republican district.
+
 McCain was not without support financially either. When he met a
 local home builder named Charles Keating in 1981 at a speaking
 engagement, McCain was very happy to receive his support. Keating
@@ -236,28 +129,28 @@ of taxpayer money lost, Keating was convicted of fraud and
 racketeering (Thompson 1993). More importantly for McCain, however,
 was the fact that he, along with four other senators, had met with
 and questioned the regulators in charge of investigating Keating. The
-chief regulator, Edwin Gray, felt intimidated by this &quot;show of
-force&quot; and it appeared that the Senators were improperly
+chief regulator, Edwin Gray, felt intimidated by this "show of
+force" and it appeared that the Senators were improperly
 furthering Keating's criminal activities because he had contributed
 to their campaigns (Thompson 1993). Thankfully for McCain, the Senate
 Ethics Committee simply rebuked his poor judgment and the episode did
 very little to damage his career as evidenced by his overwhelming
-reelection in 1992.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+reelection in 1992.
+
 Dennis Thompson used the Keating scandal in an article in the
-<I>American Political Science Review</I> to argue that the nature of
+*American Political Science Review* to argue that the nature of
 corruption in the United States government had changed such that the
 extent to which the democratic process was damaged by an incident
 must now be the central criteria for determining corruption (Thompson
 1993). Instead of focusing only on individual actors and their
 motives, the system as a whole has to be taken into consideration
 when deciding whether behavior is improper. This theory is called
-&quot;mediated corruption&quot; and Thompson did not see campaign
+"mediated corruption" and Thompson did not see campaign
 finance reform as sufficient to end this kind of corruption since it
 focuses on money alone and ignores the ambition and misplaced duty
 often involved. McCain, on the other hand, saw campaign finance
-reform as the single best solution to corruption.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+reform as the single best solution to corruption.
+
 Though McCain was absolved by the Senate Ethics Committee, the
 episode embarrassed him. To clear his name, he decided to return to
 the United States Treasury a sum of money equal to the amount Keating
@@ -267,8 +160,8 @@ signature issue for his 1992 reelection, campaign finance reform. It
 was not the first time he had dealt with the issue. He had joined
 Senators McConnell and Packwood in offering an alternative to the
 sweeping Democratic reform proposal in 1987 (Washington Post 1987).
-But his new bill would be much more comprehensive and controversial.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+But his new bill would be much more comprehensive and controversial.
+
 John McCain was a Republican, but early on he showed that he was no
 ordinary party-liner. As early as 1983, McCain broke with the Reagan
 administration on keeping Marines in Lebanon; he indicated support
@@ -278,9 +171,8 @@ program in 1987 (Blustein 1987). Biographer Paul Alexander argues
 that McCain drifted toward the middle of the political spectrum
 throughout the 1980's, becoming more moderate on social issues while
 remaining fiscally conservative (2003, 149-150). This explanation
-seems plausible. 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+seems plausible.
+
 For the most part, however, John McCain supported the Republicans in
 his early years. He supported President Reagan and his agenda during
 his first term in the House (Alexander 2003, 99), and he campaigned
@@ -290,8 +182,8 @@ prominence. He gave a powerful speech at the Republican Convention
 that included a moving anecdote about his POW experience. Although it
 did not earn him the Vice Presidency, as he had hoped, he was
 immediately recognized as a rising leader on the national stage
-(Alexander 2003, 119-122).</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+(Alexander 2003, 119-122).
+
 Senators generally have three primary goals: reelection, good public
 policy, and increased power and influence. McCain's goals follow
 close in line with these. First, he wants to be reelected. Like any
@@ -305,8 +197,8 @@ stance independent enough from the Republicans to appease the
 moderates, and yet supportive enough of Republicans to maintain, for
 the most part, the support of conservatives. The future of this kind
 of moderate position is unclear, however, and deserves further
-discussion.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+discussion.
+
 Another important objective for McCain is good public policy. McCain
 has become known for two main issues: campaign finance reform, and
 responsible spending for the public good. The two issues are
@@ -324,8 +216,8 @@ parties' ability to raise funds; and McCain's hostility to pork
 barrel spending has been attacked presumably because many Senators
 rely upon it to get reelected. The unpopularity of his policy
 objectives among Senators has resulted in many years of frustration
-for him as many of his bills have failed.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+for him as many of his bills have failed.
+
 The third and final objective of McCain's political career
 corresponds to increased power and influence, but it is more
 specific. McCain wants to be President. He wanted to be Bush's Vice
@@ -340,31 +232,29 @@ interested in controversy, McCain's antiestablishment tendencies are
 given much press. Furthermore, he has gone above and beyond the
 average politician to court the press's favor, especially in his
 campaign for President. In that campaign, he rode a bus called
-&quot;Straight Talk Express&quot; and invited reporters to come
-aboard and get a sample of his &quot;straight talk&quot; (Johnson
+"Straight Talk Express" and invited reporters to come
+aboard and get a sample of his "straight talk" (Johnson
 2002). But as popular as he was with the media, and with many
 moderate Americans, he eventually was shadowed by the Republican
 Party's favored son, George W. Bush. John McCain's presidential
 aspirations did not die in 2000, however. While he rejected John
 Kerry's invitation to join the Democratic ticket in 2004, he seems to
-have his eyes set on 2008.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+have his eyes set on 2008.
+
 McCain has been reelected five times and his now twenty-three year
 old career will continue at least until 2010. His goal to become
 President may still be realized. But how well has John McCain been
 able to promote good public policy, his second goal? This question is
 answered through an examination of his legislative leadership
 abilities in the Senate, both in his early failures and in his later
-successes. 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+successes.
+
 The elections of 1994 turned out well for Republicans, and John
 McCain gained power as they took the majority. Appointed chairman of
 the Commerce Committee, he began working with both parties to
 accomplish important policy objectives. His priorities, of course,
-were campaign finance reform and ending pork barrel spending. 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+were campaign finance reform and ending pork barrel spending.
+
 The first main test of his leadership abilities started in 1995 when
 Senate majority leader Trent Lott asked him to write legislation that
 would enact into federal law provisions of a settlement made by
@@ -376,9 +266,9 @@ McCain, however, he miscalculated the political realities of the
 situation. He worked hard to draft a policy that won the support of
 all but one of the Commerce Committee members, which included taxing
 tobacco at $1.10 per pack (Torry and Dewar 1998). When the committee
-passed it overwhelmingly, McCain was so excited that he said, &quot;I
+passed it overwhelmingly, McCain was so excited that he said, "I
 was starting to think that maybe I could be president, or at least
-that I should try&quot; (McCain and Salter 2002). However, the
+that I should try" (McCain and Salter 2002). However, the
 penalty was larger than the settlement had required and so the
 tobacco industry launched a public relations effort aimed at killing
 the bill. When the bill finally reached the floor in 1998, the
@@ -387,18 +277,16 @@ tobacco companies, threatened a filibuster. Not enough votes could be
 found to end debate even though a majority of the Senate supported
 it. This made McCain extremely angry, and it was formative in his
 decision to run for President. He recalls his final speech on the
-Senate floor: 
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; margin-bottom: 0in">I
+Senate floor:
+
+I
 was just angry, and I expressed it at length, suggesting near the end
 of my remarks that perhaps the health of children should be a greater
 concern to my party. When I finished, every Democrat on the floor
 rose to applaud me, the only standing ovation I've ever received in a
 Senate debate. Not a single Republican joined in the tribute. (McCain
-and Salter 2002, 365)</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; margin-bottom: 0in"><BR>
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+and Salter 2002, 365)
+
 But the failure of the tobacco bill would not be McCain's low point.
 Though protecting children from tobacco was important to him, it was
 not his primary issue. Ever since the Keating scandal and his 1992
@@ -408,9 +296,8 @@ found an ally in Russell Feingold. Though they are on opposite sides
 of most issues, McCain and Feingold joined together to fight both the
 appropriations earmarks that represented irresponsible spending and
 the unregulated contributions that represented corruption in
-Congressional politics (McCain and Salter 2002, 358-361). 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+Congressional politics (McCain and Salter 2002, 358-361).
+
 A lot had changed since the 1987 campaign reform bill. Though McCain
 had sponsored that bill as counter to a Democratic proposal for
 public financing of elections, many of the early McCain-Feingold
@@ -418,8 +305,8 @@ bills included elements of public financing of elections. One other
 important contrast can be made. While the 1987 bill McCain supported
 was championed by Senator Mitch McConnell of Kentucky, McConnell
 became McCain's chief nemesis in the campaign finance debate of the
-late 1990's (McCain and Salter 2002, 361).</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+late 1990's (McCain and Salter 2002, 361).
+
 From 1997 to 1999, the McCain-Feingold bill was thwarted time and
 time again by Senate procedural votes and McCain was unable to muster
 the necessary 60 votes. A weaker form of the bill was presented in
@@ -437,14 +324,14 @@ conservatives saw the bill as a limit on free speech. They attacked
 McCain's claims of corruption in the middle of the debate and asked
 him to back up the statements he had made on his website that
 particular Senators had misused public funds to benefit their
-supporters. The debate became emotionally charged, &quot;reflected
-personal animus toward McCain,&quot; and diverted from the real
+supporters. The debate became emotionally charged, "reflected
+personal animus toward McCain," and diverted from the real
 issue, according to political scientist Roger Davidson (Davidson
 2001). After debate ended, a partisan cloture vote failed since the
 forty-five Democrats were joined by only seven Republicans. Thus the
 bill was killed, and McCain took down the offending references on his
-website. It seemed that he had failed.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+website. It seemed that he had failed.
+
 John McCain did not give up. His presidential campaign made campaign
 finance reform the number one issue, and he was successful in raising
 the public's awareness of its importance. When Bush took office,
@@ -459,28 +346,27 @@ unconstitutional. McCain also wanted to raise the limits on
 individual hard money contributions from one thousand to two thousand
 dollars, but it took quite a bit of negotiating with Feingold and the
 Democrats to get them to back this idea (Drew 2002, 43). Eventually,
-the provision was included and the Senate passed the bill.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+the provision was included and the Senate passed the bill.
+
 There are two important strategic reasons that McCain-Feingold
 finally passed the Senate. First, McCain prepared himself emotionally
 for the debate; and he surrounded himself with supporters so that it
 was not a one man fight. Second, McCain ingeniously used Senate floor
-strategy to manage the negotiations of ever-shifting coalitions. 
-</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+strategy to manage the negotiations of ever-shifting coalitions.
+
 McCain learned his lesson in 1999 and his strategy changed. He puts
-it this way: &quot;I'm not going to let them pull me into a personal
+it this way: "I'm not going to let them pull me into a personal
 combat. That was my worst test. I'm not going to engage in that
-again&quot; (Drew 2002, 3). While a certain amount of tenacity was
-required to &quot;shake things up in Washington&quot; as he had
+again" (Drew 2002, 3). While a certain amount of tenacity was
+required to "shake things up in Washington" as he had
 promised to do in his presidential campaign, he could not stand
 against his party any longer. The 2000 elections had proven the
-Republicans' strength, and so he had to avoid &quot;antagonizing
+Republicans' strength, and so he had to avoid "antagonizing
 Republicans who [hadn't] supported reform before but who might come
-over to his side&quot; (Drew 2002, 30). Thus, he formed a coalition
+over to his side" (Drew 2002, 30). Thus, he formed a coalition
 of twelve of the bill's strongest backers and divided the workload of
-the debate among them.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+the debate among them.
+
 Secondly, McCain skillfully used amendment strategy to keep the
 maximum number of Senators behind his bill. The best example of this
 is with the issue of raising hard money limits. Republican Fred
@@ -496,11 +382,11 @@ Democrats would have bolted, but McCain urged Republicans not to
 table Feinstein's amendment. This triggered a lengthy negotiation
 between the two proposals, and the compromise was a huge success –
 it passed 84 to 16 (Drew 2002, 55-57). This was a fine example of the
-type of powerful leadership McCain was finally able to gain.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+type of powerful leadership McCain was finally able to gain.
+
 The Bipartisan Campaign Finance Reform Act of 2002 was signed by
-President Bush and survived a Supreme Court challenge in <I>McConnell
-v. FEC</I>. McCain continues to fight with the Federal Election
+President Bush and survived a Supreme Court challenge in *McConnell
+v. FEC*. McCain continues to fight with the Federal Election
 Commission over enforcement of the ban on soft money, especially with
 the rise of 527 organizations in the 2004 election. But the act's
 passage is monumental for McCain's career, as it represents his first
@@ -508,11 +394,11 @@ major legislative success. Further examples of McCain's influence
 recently include his leadership over a bipartisan group of seven
 Republicans and seven Democrats who struck a deal to end the
 filibuster of several of Bush's judicial nominees earlier this year
-(Continetti 2005), and his &quot;little triumvirate&quot; with
-Senators Warner and Graham which has become &quot;a powerful
+(Continetti 2005), and his "little triumvirate" with
+Senators Warner and Graham which has become "a powerful
 political force at a time when President Bush's popularity is
-sinking&quot; (Stolberg 2005).</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+sinking" (Stolberg 2005).
+
 John McCain's recent successes have not been entirely positive for
 his reputation among his constituency, however. In fact, many
 conservative Republicans in Arizona are largely skeptical about
@@ -524,12 +410,12 @@ him in every election since 1982, had been questioning whether McCain
 represented his viewpoints until just recently. As a grassroots
 leader, he attended an event where McCain spoke and was very
 impressed with how conservative he seemed. Perhaps McCain is
-attempting to shed the &quot;maverick&quot; label and return to his
+attempting to shed the "maverick" label and return to his
 traditional conservative war hero image, or maybe he never lost that
 image among his constituency, and now he is able to downplay his
 independent streak more convincingly since he no longer has an
-unpopular crusade to carry out.</P>
-<P CLASS="western" STYLE="text-indent: 0.5in; margin-bottom: 0in; line-height: 200%">
+unpopular crusade to carry out.
+
 The future of McCain and moderates like him is unclear. For a while,
 it seemed like the Republicans were going to dominate as they
 maintained control of Congress and Bush was reelected. But the
@@ -543,96 +429,56 @@ significantly moderated. If McCain can continue to form coalitions
 between Democrats and moderate Republicans, it is possible that he
 could repeat the success of 2001. But even if he cannot, his career
 may be on the upswing as a vacated White House looms large in his
-horizon.</P>
-<P CLASS="western" STYLE="margin-bottom: 0in; line-height: 200%; page-break-before: always">
-<B>Works Cited</B></P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-Alexander, Paul. 2003. <I>Man of the People: The Life of John McCain.</I>
-Hoboken, NJ: John Wiley &amp; Sons, Inc.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+horizon.
+
+**Works Cited**
+
+Alexander, Paul. 2003. *Man of the People: The Life of John McCain.*
+Hoboken, NJ: John Wiley & Sons, Inc.
+
 Blustein, Paul. 1987. Reagan Seeks to Divert Program Funding To
-Finance Raises for Federal Workers. <I>Wall Street Journal. </I>January
-29. New York.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-bottom: 0in">Continetti, Matthew.
-2005. Round One to McCain. <I>The Weekly Standard.</I> 6 June 2005:
-8.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+Finance Raises for Federal Workers. *Wall Street Journal.* January
+29. New York.
+
+Continetti, Matthew.
+2005. Round One to McCain. *The Weekly Standard.* 6 June 2005:
+8.
+
 Davidson, Roger H. 2001. Senate Floor Deliberation: A Preliminary
-Inquiry. In <I>The Contentious Senate</I>, edited by Colton C.
-Campbell and Nicol C. Rae, 21-42. Lanham, MD: Rowman &amp;
-Littlefield Publishers, Inc.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-Dorland, Gilbert N. 2001. <I>Legacy of Discord</I>: <I>Voices of the
-Vietnam War Era.</I> Washington: Brassey's, Inc.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-Drew, Elizabeth. 2002. <I>Citizen McCain. </I>New York: Simon &amp;
-Schuster.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-Fenno, Richard. 1977. <FONT FACE="Baskerville Old Face, Times New Roman, serif">U.S.
-House Members in their Constituencies: An Exploration. </FONT><FONT FACE="Baskerville Old Face, Times New Roman, serif"><I>American
-Political Science Review </I></FONT><FONT FACE="Baskerville Old Face, Times New Roman, serif">7,
-no. 3:</FONT> 883-917.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-Johnson, James W. 2002. <I>Arizona Politicians: The Noble and the
-Notorious. </I>Tucson, AZ: University of Arizona Press.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-McCain, John and Mark Salter. 1999. <I>Faith of My Fathers</I>. New
-York: Random House.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-_____________ 2002. <I>Worth the Fighting For: A Memoir</I>. New
-York: Random House.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+Inquiry. In *The Contentious Senate*, edited by Colton C.
+Campbell and Nicol C. Rae, 21-42. Lanham, MD: Rowman &
+Littlefield Publishers, Inc.
+
+Dorland, Gilbert N. 2001. *Legacy of Discord*: *Voices of the
+Vietnam War Era.* Washington: Brassey's, Inc.
+
+Drew, Elizabeth. 2002. *Citizen McCain.* New York: Simon &
+Schuster.
+
+Fenno, Richard. 1977. U.S.
+House Members in their Constituencies: An Exploration. *American
+Political Science Review* 7,
+no. 3: 883-917.
+
+Johnson, James W. 2002. *Arizona Politicians: The Noble and the
+Notorious.* Tucson, AZ: University of Arizona Press.
+
+McCain, John and Mark Salter. 1999. *Faith of My Fathers*. New
+York: Random House.
+
+_____________ 2002. *Worth the Fighting For: A Memoir*. New
+York: Random House.
+
 Rogers, David. 1985. Ten Years After -- Vietnam's Legacy: Two
-Veterans of War Find in Public Office Other Ways to Serve. <I>Wall
-Street Journal. </I>February 11.<I> </I>New York.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+Veterans of War Find in Public Office Other Ways to Serve. *Wall
+Street Journal.* February 11. **New York.
+
 Stolberg, Sheryl Gay. 2005. In the Senate, A Chorus of 3 Defies the
-Line. <I>New York Times. </I>November 21. New York.</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+Line. *New York Times.* November 21. New York.
+
 Thompson, Dennis F. 1993. Mediated Corruption: The Case of the
-Keating Five. <I>The American Political Science Review </I>87, no. 2:
-369-381<I>.</I></P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
-<BR>
-</P>
-<P CLASS="western" STYLE="margin-left: 0.5in; text-indent: -0.5in; margin-bottom: 0in">
+Keating Five. *The American Political Science Review* 87, no. 2:
+369-381.
+
 Torry, Saundra and Helen Dewar. 1998. Senate GOP Kills McCain Tobacco
-Bill. <I>The Washington Post. </I>June 18. Washington, D. C.</P>
-</BODY>
-</HTML>
+Bill. *The Washington Post.* June 18. Washington, D. C.

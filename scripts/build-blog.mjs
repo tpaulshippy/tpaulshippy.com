@@ -50,9 +50,9 @@ function renderInline(s) {
   });
   // links
   s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
-  // bold, italic (after links so link text markup survives)
+  // bold, italic (after links so link text markup survives; spans may wrap lines)
   s = s.replace(/\*\*([^*]+?)\*\*/g, "<strong>$1</strong>");
-  s = s.replace(/(^|[^*\w])\*([^*\n]+?)\*/g, "$1<em>$2</em>");
+  s = s.replace(/(^|[^*\w])\*([^*]+?)\*(?![*\w])/g, "$1<em>$2</em>");
   // restore code
   s = s.replace(/(\d+)/g, (_, i) => codes[Number(i)]);
   return s;
@@ -68,6 +68,7 @@ function renderMarkdown(md) {
   let quoteBuf = null;
 
   function closeList() {
+    closeListItem();
     if (listTag) {
       html += `</${listTag}>\n`;
       listTag = null;
@@ -84,6 +85,13 @@ function renderMarkdown(md) {
     if (buf.length) html += `<p>${renderInline(buf.join(" "))}</p>\n`;
   };
   let para = [];
+  let listItem = null; // accumulated lines for the current <li> (wraps allowed)
+  function closeListItem() {
+    if (listItem !== null) {
+      html += `<li>${renderInline(listItem.join(" "))}</li>\n`;
+      listItem = null;
+    }
+  }
 
   for (const raw of lines) {
     const line = raw.replace(/\s+$/, "");
@@ -139,8 +147,18 @@ function renderMarkdown(md) {
         closeList();
         html += `<${tag}>\n`;
         listTag = tag;
+      } else {
+        closeListItem();
       }
-      html += `<li>${renderInline((ul || ol)[1])}</li>\n`;
+      listItem = [(ul || ol)[1]];
+      continue;
+    }
+    if (listTag !== null) {
+      // Lazy continuation line of the current list item (CommonMark):
+      // wrapped item text joins the open <li>.
+      closeQuote();
+      flushPara(para); para = [];
+      listItem.push(line.trim());
       continue;
     }
     closeList(); closeQuote();
@@ -154,7 +172,22 @@ function renderMarkdown(md) {
 
 // --- Page templates (match the main site aesthetic) -----------------------
 
-function head(title, description, canonical) {
+function head(title, description, canonical, opts = {}) {
+  const brandName = opts.brandName || "Paul's Blog";
+  const brandSub = opts.brandSub || "TPaulShippy.com";
+  const brandHref = opts.brandHref || "/";
+  const nav = opts.nav || `
+      <nav class="main-nav" aria-label="Primary">
+        <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/">Home</a>
+        <a class="btn btn-ghost btn-sm" href="/">Blog</a>
+        <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
+      </nav>`;
+  const mobileNav = opts.mobileNav || `
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/">Home</a>
+      <a class="btn btn-ghost btn-sm" href="/">Blog</a>
+      <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
+    </nav>`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -205,29 +238,21 @@ function head(title, description, canonical) {
   <a href="#main" class="skip-link">Skip to content</a>
   <header class="site-header">
     <div class="header-inner">
-      <a href="/" class="brand">
+      <a href="${brandHref}" class="brand">
         <span class="avatar avatar-sm"><img src="https://tpaulshippy.com/IMG_0568.JPG" alt="Photo of Paul Shippy" onerror="this.style.display='none'" /><span class="avatar-fallback">PS</span></span>
         <span class="brand-text">
-          <span class="brand-name">Paul's Blog</span>
-          <span class="brand-sub">TPaulShippy.com</span>
+          <span class="brand-name">${brandName}</span>
+          <span class="brand-sub">${brandSub}</span>
         </span>
       </a>
-      <nav class="main-nav" aria-label="Primary">
-        <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/">Home</a>
-        <a class="btn btn-ghost btn-sm" href="/">Blog</a>
-        <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
-      </nav>
+${nav}
       <div class="header-actions">
         <button id="menu-toggle" class="btn btn-ghost btn-icon menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <svg class="lucide lucide-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
         </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
-      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/">Home</a>
-      <a class="btn btn-ghost btn-sm" href="/">Blog</a>
-      <a class="btn btn-ghost btn-sm" href="/feed.xml">RSS</a>
-    </nav>
+${mobileNav}
   </header>
   <main id="main" class="container">`;
 }
@@ -307,6 +332,48 @@ function indexPage(posts) {
     </section>
     <section class="cards-grid blog-index">
 ${items}
+    </section>
+${FOOT}`;
+}
+
+function writingPage(w) {
+  const canonical = `https://tpaulshippy.com/${w.meta.out.replace(/ /g, "%20").replace(/&/g, "%26")}`;
+  const subtitle = w.meta.subtitle
+    ? `\n          <p class="hero-sub">${escapeHtml(w.meta.subtitle)}</p>`
+    : "";
+  return `${head(w.meta.title, w.excerpt, canonical, {
+    brandName: "Paul's Homepage",
+    brandSub: "TPaulShippy.com",
+    brandHref: "https://tpaulshippy.com/",
+    nav: `
+      <nav class="main-nav" aria-label="Primary">
+        <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#apps">Apps</a>
+        <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#projects">Projects</a>
+        <a class="btn btn-ghost btn-sm hide-on-desktop" href="https://tpaulshippy.com/#links">Links</a>
+        <a class="btn btn-ghost btn-sm hide-on-desktop" href="https://tpaulshippy.com/#writings">Writings</a>
+        <a class="btn btn-ghost btn-sm" href="https://blog.tpaulshippy.com/">Blog</a>
+      </nav>`,
+    mobileNav: `
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile">
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#apps">Apps</a>
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#projects">Projects</a>
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#links">Links</a>
+      <a class="btn btn-ghost btn-sm" href="https://tpaulshippy.com/#writings">Writings</a>
+      <a class="btn btn-ghost btn-sm" href="https://blog.tpaulshippy.com/">Blog</a>
+    </nav>`,
+  })}
+    <section class="hero-section">
+      <div class="card">
+        <div class="card-content">
+          <p class="eyebrow">Past works</p>
+          <h1 class="hero-title">${escapeHtml(w.meta.title)}</h1>${subtitle}
+          <div class="post-content">${w.html}</div>
+          <div class="hero-cta">
+            <a class="btn btn-outline" href="https://tpaulshippy.com/#writings">All writings</a>
+            <a class="btn btn-ghost" href="https://tpaulshippy.com/">tpaulshippy.com</a>
+          </div>
+        </div>
+      </div>
     </section>
 ${FOOT}`;
 }
@@ -401,6 +468,18 @@ function main() {
   }
 
   console.log(`blog build: ${posts.length} posts -> ${OUT}`);
+
+  // writings (past works): same look, exact legacy filenames at repo root
+  const wsrc = join(ROOT, "blog-src", "writings");
+  const wfiles = readdirSync(wsrc).filter((f) => f.endsWith(".md")).sort();
+  if (!wfiles.length) throw new Error("no writings found in blog-src/writings");
+  for (const file of wfiles) {
+    const { meta, body } = parsePost(readFileSync(join(wsrc, file), "utf8"), file);
+    if (!meta.title || !meta.out) throw new Error(`missing frontmatter in writings/${file}`);
+    const html = renderMarkdown(body);
+    writeFileSync(join(ROOT, meta.out), writingPage({ meta, html, excerpt: excerptOf(html) }));
+  }
+  console.log(`writings build: ${wfiles.length} pages -> repo root`);
 }
 
 main();
