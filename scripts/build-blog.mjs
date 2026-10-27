@@ -229,8 +229,10 @@ function head(title, description, canonical, opts = {}) {
     .post-content hr { margin: 2.25em 0; border: 0; border-top: 1px solid hsl(var(--border)); }
     .post-meta { opacity: 0.75; font-size: 0.9em; margin-bottom: 1.5em; }
     /* Past-works pages have no byline under the H1, so the title carries
-       its own bottom margin to match the blog rhythm. */
+       its own bottom margin to match the blog rhythm. Same for the
+       optional subtitle that follows it. */
     .hero-title.writing-title { margin-bottom: 1.5rem; }
+    .hero-title.writing-title + .hero-sub { margin-bottom: 1.5rem; }
     /* Blog index: one column on phones, spreading across desktop. */
     .blog-index { grid-template-columns: 1fr; }
     @media (min-width: 768px) { .blog-index { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
