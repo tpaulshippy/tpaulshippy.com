@@ -1,0 +1,14 @@
+index.html
+  h_6bbd00fe0a456a 179-191
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "5c4ef66b97e417c0879be1743427e37600a54e72",
+  "prompts": {},
+  "humans": {
+    "h_6bbd00fe0a456a": {
+      "author": "Paul Shippy <pshippy@gmail.com>"
+    }
+  }
+}
