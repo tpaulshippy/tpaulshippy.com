@@ -228,6 +228,9 @@ function head(title, description, canonical, opts = {}) {
     .post-content pre code { background: none; border: 0; padding: 0; font-size: 1em; }
     .post-content hr { margin: 2.25em 0; border: 0; border-top: 1px solid hsl(var(--border)); }
     .post-meta { opacity: 0.75; font-size: 0.9em; margin-bottom: 1.5em; }
+    /* Past-works pages have no byline under the H1, so the title carries
+       its own bottom margin to match the blog rhythm. */
+    .hero-title.writing-title { margin-bottom: 1.5rem; }
     /* Blog index: one column on phones, spreading across desktop. */
     .blog-index { grid-template-columns: 1fr; }
     @media (min-width: 768px) { .blog-index { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -366,7 +369,7 @@ function writingPage(w) {
       <div class="card">
         <div class="card-content">
           <p class="eyebrow">Past works</p>
-          <h1 class="hero-title">${escapeHtml(w.meta.title)}</h1>${subtitle}
+          <h1 class="hero-title writing-title">${escapeHtml(w.meta.title)}</h1>${subtitle}
           <div class="post-content">${w.html}</div>
           <div class="hero-cta">
             <a class="btn btn-outline" href="https://tpaulshippy.com/#writings">All writings</a>
